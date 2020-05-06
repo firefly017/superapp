@@ -5,6 +5,7 @@ export default function NavBar() {
     <div>
       <NavLink
         to="/"
+        exact
         activeStyle={{
           fontWeight: "bold",
           color: "red",

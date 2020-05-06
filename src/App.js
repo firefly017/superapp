@@ -1,7 +1,12 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import DiscoverMoviePage from "./pages/DiscoverMoviesPage";
 import AboutPage from "./pages/Aboutpage";
@@ -14,7 +19,7 @@ function App() {
       <Switch>
         <Route path="/discover" component={DiscoverMoviePage} />
         <Route path="/about" component={AboutPage} />
-        <Route path="/" component={HomePage} />
+        <Route exact path="/" component={HomePage} />
       </Switch>
     </div>
   );
